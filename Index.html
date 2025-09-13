@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Focus Flow</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app-wrapper">
+    <header class="app-header">
+      <h1>Focus Flow</h1>
+      <div class="top-controls">
+        <div class="points">
+          Points: <span id="points">0</span>
+          • Streak: <span id="streak">0</span>
+        </div>
+        <div class="theme-buttons">
+          <button class="theme-btn" data-theme="light">Light</button>
+          <button class="theme-btn" data-theme="focus">Focus</button>
+          <button class="theme-btn" data-theme="dark">Dark</button>
+        </div>
+      </div>
+    </header>
+
+    <main class="grid">
+      <section class="card">
+        <h2>Quick Timer</h2>
+        <label class="small" for="minutesInput">Minutes</label>
+        <input id="minutesInput" type="number" min="0" placeholder="e.g. 20" />
+        <div id="display" class="big-display">00:00</div>
+        <div class="controls">
+          <button id="startButton" class="btn primary">Start</button>
+          <button id="pauseButton" class="btn warn">Pause</button>
+          <button id="resumeButton" class="btn info">Resume</button>
+          <button id="stopButton" class="btn neutral">Stop</button>
+          <button id="resetButton" class="btn danger">Reset</button>
+        </div>
+        <div class="progress-wrap">
+          <div class="progress-bar" id="progressBar"></div>
+        </div>
+      </section>
+
+      <section class="card">
+        <h2>Pomodoro</h2>
+        <div class="row">
+          <label for="workInput">Work</label>
+          <input id="workInput" type="number" min="1" placeholder="25" />
+          <label for="breakInput">Break</label>
+          <input id="breakInput" type="number" min="1" placeholder="5" />
+        </div>
+        <div id="pomodoroDisplay" class="big-display">25:00</div>
+        <div class="controls">
+          <button id="startPomodoro" class="btn primary">Start Pomodoro</button>
+          <button id="pausePomodoro" class="btn warn">Pause</button>
+          <button id="resumePomodoro" class="btn info">Resume</button>
+          <button id="resetPomodoro" class="btn danger">Reset</button>
+        </div>
+      </section>
+
+      <section class="card notes-card">
+        <h2>Smart Notes</h2>
+        <div class="row">
+          <input id="noteInput" type="text" placeholder="Write a quick note..." />
+          <button id="addNote" class="btn success">Add</button>
+        </div>
+        <input id="searchNote" type="text" placeholder="Search notes..." />
+        <ul id="notesList"></ul>
+      </section>
+    </main>
+  </div>
+  <script src="project.js"></script>
+</body>
+</html>
